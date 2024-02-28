@@ -1,0 +1,68 @@
+{
+  "name": "daily-sentence",
+  "displayName": "Daily Sentence",
+  "description": "Whether it's anime, fiction, or the internet, wherever you are, there are always one or two sentences that can penetrate your mind.",
+  "version": "0.0.1",
+  "publisher": "vscode-samples",
+  "repository": "https://github.com/fourdusk/daily-sentence.git",
+  "license": "MIT",
+  "keywords": [
+    "daily-sentence"
+  ],
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "daily-sentence.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "daily-sentence-container",
+          "title": "Daily Sentence",
+          "icon": "resource/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "daily-sentence-container": [
+        {
+          "type": "webview",
+          "id": "daily-sentence-view",
+          "name": "Daily Sentence"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.86.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
