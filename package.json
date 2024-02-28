@@ -3,7 +3,7 @@
   "displayName": "Daily Sentence",
   "description": "Whether it's anime, fiction, or the internet, wherever you are, there are always one or two sentences that can penetrate your mind.",
   "version": "0.0.1",
-  "publisher": "vscode-samples",
+  "publisher": "fourdusk",
   "repository": "https://github.com/fourdusk/daily-sentence.git",
   "license": "MIT",
   "keywords": [
